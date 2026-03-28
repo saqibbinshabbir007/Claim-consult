@@ -39,22 +39,22 @@ const Navbar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
-          <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-kpmglight rounded-md flex items-center justify-center">
-              <span className="text-white font-bold text-sm">CC</span>
+        <div className="flex items-center justify-between h-20 lg:h-24">
+          <Link to="/" className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-kpmglight rounded-md flex items-center justify-center">
+              <span className="text-white font-bold text-base">CC</span>
             </div>
-            <span className="text-white font-bold text-lg lg:text-xl tracking-tight">
+            <span className="text-white font-bold text-xl lg:text-2xl tracking-tight">
               Claim Consultants
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+                className={`px-5 py-2.5 rounded-md text-base font-medium transition-colors duration-200 ${
                   location.pathname === link.path
                     ? "text-white bg-kpmgmid/40"
                     : "text-white/80 hover:text-white hover:bg-white/10"
@@ -65,7 +65,7 @@ const Navbar = () => {
             ))}
             <Link
               to="/contact"
-              className="ml-4 bg-kpmglight text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-kpmglight/90 transition-colors"
+              className="ml-6 bg-kpmglight text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-kpmglight/90 transition-colors"
             >
               Book Consultation
             </Link>
