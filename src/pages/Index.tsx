@@ -1,16 +1,33 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Helmet } from "react-helmet-async";
+import Hero from "@/components/Hero";
+import Stats from "@/components/Stats";
+import About from "@/components/About";
+import Services from "@/components/Services";
+import Industries from "@/components/Industries";
+import CaseStudies from "@/components/CaseStudies";
+import Contact from "@/components/Contact";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <>
+      <Helmet>
+        <title>Claim Consultants — Technical Insurance Claim Consultancy Pakistan</title>
+        <meta name="description" content="Pakistan's leading technical insurance claim consultancy. Expert Root Cause Analysis, claim documentation, and negotiation for industrial losses. Maximize your claim settlement." />
+      </Helmet>
+      <Hero />
+      <Stats />
+      <div className="section-divider" />
+      <About />
+      <div className="section-divider" />
+      <Services />
+      <div className="section-divider" />
+      <Industries />
+      <div className="section-divider" />
+      <CaseStudies />
+      <div className="section-divider" />
+      <Contact />
+    </>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
