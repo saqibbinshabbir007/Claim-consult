@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -57,9 +59,9 @@
     @apply bg-white border-t-[3px] border-kpmgmid shadow-sm rounded-lg;
   }
   .btn-kpmg {
-    @apply bg-kpmgmid text-white font-semibold px-6 py-3 rounded-lg hover:bg-kpmgdark transition-colors duration-200;
+    @apply bg-kpmgmid text-white font-semibold px-6 py-3 rounded-lg hover:bg-kpmgdark transition-colors duration-200 !text-white;
   }
   .btn-kpmg-outline {
-    @apply border-2 border-kpmglight text-kpmglight font-semibold px-6 py-3 rounded-lg hover:bg-kpmglight hover:text-white transition-colors duration-200;
+    @apply border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-kpmgmid transition-colors duration-200;
   }
 }

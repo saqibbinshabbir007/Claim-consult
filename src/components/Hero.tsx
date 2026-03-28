@@ -71,10 +71,9 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight text-white drop-shadow-lg"
+            className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight text-white drop-shadow-lg font-heading"
             style={{
               textShadow: "0 4px 12px rgba(0, 0, 0, 0.6)",
-              fontFamily: "'Outfit', sans-serif",
               fontWeight: 700,
               letterSpacing: "-0.02em"
             }}
