@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const SplitBanner = () => {
   return (
@@ -19,15 +18,9 @@ const SplitBanner = () => {
           transition={{ duration: 0.6 }}
           className="absolute inset-0 flex flex-col justify-center px-6 sm:px-10 lg:px-16"
         >
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-3 font-heading">
-            YOUR CLAIM, OUR EXPERTISE
-          </h2>
-          <p className="text-white/85 text-sm sm:text-base leading-relaxed max-w-md mb-5">
-            When your business faces an insurance loss, you need engineers and claim specialists who work exclusively for you. We build the technical case that maximizes your recovery.
+          <p className="text-white text-sm sm:text-base leading-loose max-w-md">
+            Established in Pakistan, with a team of qualified engineers and insurance claim specialists, we provide specialized services to industrial and corporate clients, including Loss Adjusting, Root Cause Analysis, Claim Documentation and Insurance focused Technical Consulting.
           </p>
-          <Link to="/contact" className="btn-kpmg w-fit text-sm">
-            Book Free Consultation
-          </Link>
         </motion.div>
       </div>
 
