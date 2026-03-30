@@ -5,24 +5,29 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const heroSlides = [
   {
-    image: "/Heroimage/home-slider-1-knowledge-property.jpg",
-    title: "A Knowledge Company",
-    description: "A unique mix of professional skills applied to Insurance Loss Adjusting, including Engineering, Legal, Financial, Accounting and Problem Solving services",
+    image: "/Heroimage/fire_adjuster.webp",
+    title: "On-Site Fire Damage Investigation",
+    description: "Our certified loss adjusters respond immediately to industrial fire incidents, gathering critical evidence to support your maximum claim recovery.",
   },
   {
-    image: "/Heroimage/home-slider-2-loss-adjusting-property.jpg",
-    title: "Loss Adjusting Excellence",
-    description: "Comprehensive property damage assessment and loss adjusting services for maximum claim recovery",
+    image: "/Heroimage/adjuser.webp",
+    title: "Structural Loss Assessment",
+    description: "When fire devastates your facility, our expert engineers conduct thorough structural assessments to document every aspect of your loss.",
   },
   {
-    image: "/Heroimage/home-slider-3-loss-adjusting-liability.jpg",
-    title: "Liability Claims Expertise",
-    description: "Expert handling of liability claims with professional analysis and strategic guidance",
+    image: "/Heroimage/flux-2-pro-20251231_a_remove_blue_overlay_.webp",
+    title: "Expert Technical Consulting",
+    description: "Qualified engineers and claim specialists who review technical documentation, blueprints and policies to build your strongest possible claim.",
   },
   {
-    image: "/Heroimage/home-slider-4-corporate-claims.jpg",
-    title: "Corporate Claims Solutions",
-    description: "Specialized support for corporate and complex insurance claims management",
+    image: "/Heroimage/scientists-and-government-officials-inspect-and-collect-chemical-leak-samples-in-industrial-sites-to-be-thoroughly-investigated-in-the-laboratory-photo.webp",
+    title: "Industrial Site Inspection",
+    description: "Independent on-site investigations with detailed documentation — our specialists collect evidence and analyze root causes to substantiate your claim.",
+  },
+  {
+    image: "/Heroimage/wmremove-transformed.webp",
+    title: "Machinery & Equipment Loss Recovery",
+    description: "Specialized assessment of fire and equipment damage with precise valuation to ensure full recovery of your machinery and asset losses.",
   },
 ];
 
