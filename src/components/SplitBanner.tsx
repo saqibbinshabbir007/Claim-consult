@@ -7,7 +7,7 @@ const SplitBanner = () => {
       {/* Left Side - 55% with minor blue overlay */}
       <div className="relative w-full lg:w-[55%] h-[280px] sm:h-[320px] lg:h-full">
         <img
-          src="/Heroimage/flux-2-pro-20251231_a_remove_blue_overlay_.webp"
+          src="/about/consult.webp"
           alt="Expert consulting"
           className="w-full h-full object-cover"
         />
@@ -34,7 +34,7 @@ const SplitBanner = () => {
       {/* Right Side - 45% no overlay */}
       <div className="relative w-full lg:w-[45%] h-[220px] sm:h-[260px] lg:h-full">
         <img
-          src="/Heroimage/fire_adjuster.webp"
+          src="/about/factory.webp"
           alt="Fire damage investigation"
           className="w-full h-full object-cover"
         />
