@@ -22,7 +22,7 @@ const heroSlides = [
   {
     image: "/Heroimage/scientists-and-government-officials-inspect-and-collect-chemical-leak-samples-in-industrial-sites-to-be-thoroughly-investigated-in-the-laboratory-photo.webp",
     title: "Industrial Site Inspection",
-    description: "Independent on-site investigations with detailed documentation — our specialists collect evidence and analyze root causes to substantiate your claim.",
+    description: "Independent on-site investigations with detailed documentation. Our specialists collect evidence and analyze root causes to substantiate your claim.",
   },
   {
     image: "/Heroimage/wmremove-transformed.webp",
