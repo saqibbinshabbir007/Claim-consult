@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
+import SplitBanner from "@/components/SplitBanner";
 import Services from "@/components/Services";
 import Industries from "@/components/Industries";
 import CaseStudies from "@/components/CaseStudies";
@@ -15,6 +16,7 @@ const Index = () => {
       </Helmet>
       <Hero />
       <About />
+      <SplitBanner />
       <div className="section-divider" />
       <Services />
       <div className="section-divider" />
