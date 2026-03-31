@@ -7,7 +7,7 @@ const ContactPage = () => (
       <title>Contact Us — Claim Consultants | Book Free Consultation</title>
       <meta name="description" content="Contact Claim Consultants for a free insurance claim consultation. Technical claim support for industrial losses across Pakistan." />
     </Helmet>
-    <div className="pt-20 lg:pt-24">
+    <div className="pt-24 lg:pt-28">
       <div className="relative py-20 lg:py-28 text-center overflow-hidden flex flex-col items-center justify-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"

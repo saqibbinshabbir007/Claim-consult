@@ -78,7 +78,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-blue-200 text-xs sm:text-sm font-bold tracking-[0.22em] uppercase mb-5"
+            className="text-white text-xs sm:text-sm font-bold tracking-[0.22em] uppercase mb-5"
           >
             Pakistan's Industrial Loss Assessing Firm
           </motion.p>
@@ -99,10 +99,10 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg sm:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed"
+            className="text-lg sm:text-lg lg:text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed"
             style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}
           >
-            We represent the insured — assessing industrial losses, building your case, and negotiating your maximum recovery.
+            We represent the policyholder across complex <strong className="text-white font-bold">Fire, Marine, Aviation, Hull, and Terminal</strong> claims — gathering technical evidence, building your case, and negotiating your maximum recovery.
           </motion.p>
 
           {/* Value Props */}

@@ -33,7 +33,7 @@ const AboutPage = () => (
     </Helmet>
 
     {/* Hero Banner */}
-    <div className="pt-20 lg:pt-24">
+    <div className="pt-24 lg:pt-28">
       <div className="relative py-24 lg:py-32 overflow-hidden flex items-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"

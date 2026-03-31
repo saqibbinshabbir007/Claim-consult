@@ -10,7 +10,7 @@ const BlogPage = () => (
       <meta name="description" content="Practical guidance on industrial insurance claims — RCA, policy review, claim documentation, and negotiation. Written by qualified loss assessors in Pakistan." />
     </Helmet>
 
-    <div className="pt-20 lg:pt-24">
+    <div className="pt-24 lg:pt-28">
       {/* Banner */}
       <div className="relative py-24 lg:py-32 overflow-hidden flex items-center">
         <div 

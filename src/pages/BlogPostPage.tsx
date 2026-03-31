@@ -21,7 +21,7 @@ const BlogPostPage = () => {
         <meta name="description" content={post.excerpt} />
       </Helmet>
 
-      <div className="pt-20 lg:pt-24">
+      <div className="pt-24 lg:pt-28">
         {/* Banner */}
         <div className="relative bg-[#00338D] py-16 lg:py-24 overflow-hidden">
           <div className="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-white via-transparent to-transparent" />

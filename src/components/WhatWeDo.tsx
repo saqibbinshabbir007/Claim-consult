@@ -46,8 +46,8 @@ const WhatWeDo = () => {
           <h2 className="text-3xl lg:text-5xl font-extrabold text-kpmgmid mb-6 font-heading">
             WHAT WE DO
           </h2>
-          <p className="text-base sm:text-lg text-center text-slategray leading-relaxed font-sans max-w-3xl mx-auto">
-            We represent the policyholder — exclusively. From the moment a loss occurs, we step in on your behalf to assess the damage, establish root cause, prepare technical documentation, and negotiate with insurers to ensure you recover the full value of your claim.
+          <p className="text-base sm:text-lg text-center text-slategray leading-relaxed font-sans max-w-4xl mx-auto">
+            We represent the policyholder — exclusively. Operating across <strong className="text-kpmgdark">Fire, Marine, Aviation, Hull, and Terminal</strong> sectors, we step in on your behalf from the moment a loss occurs. Our engineers assess the damage, establish root cause, prepare technical documentation, and negotiate directly with insurers to ensure you recover the full value of your claim.
           </p>
         </motion.div>
       </div>

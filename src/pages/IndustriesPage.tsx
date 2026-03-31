@@ -7,7 +7,7 @@ const IndustriesPage = () => (
       <title>Industries — Claim Consultants | Textile, Pharma, Power Plant Claims</title>
       <meta name="description" content="Industrial insurance claim expertise across textile, pharma, food processing, chemical, and power plant sectors in Pakistan." />
     </Helmet>
-    <div className="pt-20 lg:pt-24">
+    <div className="pt-24 lg:pt-28">
       <div className="relative py-20 lg:py-28 text-center overflow-hidden flex flex-col items-center justify-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"

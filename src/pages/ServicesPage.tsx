@@ -7,7 +7,7 @@ const ServicesPage = () => (
       <title>Services — Policy Review, RCA, Claim Documentation & Handling | Claim Consultants Pakistan</title>
       <meta name="description" content="Technical insurance claim services for industrial clients in Pakistan — Policy Review, Root Cause Analysis, Claim Documentation, and end-to-end Claim Handling. We represent the insured." />
     </Helmet>
-    <div className="pt-20 lg:pt-24">
+    <div className="pt-24 lg:pt-28">
       <div className="relative py-20 lg:py-28 text-center overflow-hidden flex flex-col items-center justify-center">
         <div 
           className="absolute inset-0 bg-cover bg-center"
