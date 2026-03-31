@@ -8,17 +8,14 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-12">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 bg-kpmglight rounded-md flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">CC</span>
-                </div>
-                <span className="font-bold text-lg">Claim Consultants</span>
+                <img src="/Logo/logo.webp" alt="Claim Consultants Logo" className="h-12 sm:h-14 lg:h-16 w-auto max-w-full object-contain opacity-90" />
               </div>
               <p className="text-white/60 text-sm leading-relaxed">
                 Pakistan's leading technical insurance claim consultancy. Engineering expertise for maximum recovery.
               </p>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Quick Links</h4>
+              <h4 className="font-semibold text-white mb-4">Quick Links</h4>
               <div className="space-y-2">
                 {["About", "Services", "Industries", "Case Studies", "Contact"].map((link) => (
                   <Link
@@ -32,7 +29,7 @@ const Footer = () => {
               </div>
             </div>
             <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
+              <h4 className="font-semibold text-white mb-4">Contact</h4>
               <div className="space-y-2 text-white/60 text-sm">
                 <p>+92 339 8949079</p>
                 <p>info@claimsconsults.com</p>

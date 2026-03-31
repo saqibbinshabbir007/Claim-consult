@@ -1,78 +1,124 @@
-import { motion } from "framer-motion";
-import dataReport from "@/assets/illustrations/data-report.png";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const cases = [
   {
-    title: "Textile Mill Fire — Faisalabad",
-    problem: "Insurer undervalued machinery loss by 40%",
-    analysis: "RCA proved electrical fault — full coverage applicable under standard fire policy",
-    outcome: "Claim increased from PKR 8M to PKR 14M",
+    tag: "CASE HISTORY",
+    title: "Textile Mill Fire in Faisalabad",
+    desc: "Major fire at a textile processing hall measuring 50,000 sq ft and employing 800 workers. All weaving and spinning machinery was affected by flames, smoke, and water damage.",
+    outcome: "Claim successfully negotiated from PKR 50M to PKR 120M.",
+    image: "/Heroimage/fire_adjuster.webp",
   },
   {
-    title: "Pharma Reactor Breakdown — Lahore",
-    problem: "Insurer claimed operator error — not covered under machinery breakdown policy",
-    analysis: "Material fatigue proved via metallurgical analysis — manufacturing defect, fully covered",
-    outcome: "Full PKR 22M recovered, operations resumed in 45 days",
+    tag: "CASE HISTORY",
+    title: "Explosion in Pharma Industry",
+    desc: "Explosion in a Lahore pharmaceutical plant caused by thermal runaway in a chemical reaction vessel. Combined Material Damage and Business Interruption loss.",
+    outcome: "Full recovery of PKR 85M achieved via expert root cause analysis.",
+    image: "/about/factory.webp",
   },
   {
-    title: "Power Plant Flood Damage — Sindh",
-    problem: "Partial claim offered, Business Interruption clause ignored by adjuster",
-    analysis: "Business interruption clause identified and applied with supporting revenue data",
-    outcome: "Additional PKR 11M recovered — total settlement PKR 31M",
+    tag: "CASE HISTORY",
+    title: "Construction All Risk – Collapse in Karachi",
+    desc: "Collapse at a major commercial high-rise construction site with a total loss of specialized lifting equipment and scaffolding, caused by sudden foundation failure.",
+    outcome: "Total settlement of PKR 35M secured against initial insurer rejection.",
+    image: "/Heroimage/adjuser.webp",
+  },
+  {
+    tag: "CASE HISTORY",
+    title: "Machinery Breakdown at Power Plant",
+    desc: "Severe breakdown of a 320 kVA generator in a combined cycle electrical power plant in Sindh. Thorough metallurgical testing proved sudden mechanical failure.",
+    outcome: "Damages assessed and fully compensated at PKR 150 Million.",
+    image: "/Heroimage/flux-2-pro-20251231_a_remove_blue_overlay_.webp",
   },
 ];
 
-const badgeStyles = {
-  problem: "bg-red-100 text-red-700",
-  analysis: "bg-blue-100 text-kpmgmid",
-  outcome: "bg-emerald-100 text-emerald-700",
-};
-
 const CaseStudies = () => {
-  return (
-    <section className="bg-white py-20 lg:py-28">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mb-16"
-        >
-          <img src={dataReport} alt="Case studies" loading="lazy" className="h-40 mx-auto mb-8" />
-          <span className="text-kpmgmid text-sm font-semibold tracking-widest uppercase">Proven Results</span>
-          <h2 className="text-3xl lg:text-4xl font-extrabold text-darktext mt-3">Case Studies</h2>
-        </motion.div>
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {cases.map((c, i) => (
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev === 0 ? cases.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev === cases.length - 1 ? 0 : prev + 1));
+  };
+
+  return (
+    <section className="bg-gray-200 py-16 lg:py-24">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Carousel Container */}
+        <div className="relative w-full shadow-2xl bg-white overflow-hidden max-w-5xl mx-auto h-[600px] md:h-[450px]">
+          
+          <AnimatePresence mode="wait">
             <motion.div
-              key={c.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15, duration: 0.5 }}
-              className="bg-white border border-blue-100 rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow"
+              key={currentIndex}
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.5 }}
+              className="absolute inset-0 w-full h-full"
             >
-              <div className="bg-kpmgdark px-6 py-4">
-                <h3 className="text-white font-bold">{c.title}</h3>
+              {/* Image Section (Top half on mobile, full on desktop) */}
+              <div className="absolute left-0 top-0 w-full h-1/2 md:h-full">
+                <img 
+                  src={cases[currentIndex].image} 
+                  alt={cases[currentIndex].title} 
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="p-6 space-y-4">
-                <div>
-                  <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-2 ${badgeStyles.problem}`}>Problem</span>
-                  <p className="text-slategray text-sm">{c.problem}</p>
-                </div>
-                <div>
-                  <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-2 ${badgeStyles.analysis}`}>Our Analysis</span>
-                  <p className="text-slategray text-sm">{c.analysis}</p>
-                </div>
-                <div>
-                  <span className={`inline-block text-xs font-semibold px-2.5 py-1 rounded-full mb-2 ${badgeStyles.outcome}`}>Outcome</span>
-                  <p className="text-darktext text-sm font-semibold">{c.outcome}</p>
-                </div>
+
+              {/* Blue Content Box (Bottom half on mobile, Right 45% overlaid on desktop) */}
+              <div className="absolute left-0 bottom-0 w-full h-1/2 md:left-auto md:right-0 md:top-0 md:w-[45%] md:h-full bg-[#1d4ed8]/95 flex flex-col justify-center p-6 sm:p-8 md:p-10 lg:p-12 z-10">
+                <h4 className="text-white font-extrabold text-lg md:text-xl tracking-wide uppercase mb-1 drop-shadow-md">
+                  {cases[currentIndex].tag}
+                </h4>
+                <h3 className="text-white/90 font-medium text-xl md:text-2xl lg:text-3xl mb-4 md:mb-6 leading-tight">
+                  {cases[currentIndex].title}
+                </h3>
+                <p className="text-blue-50 text-sm md:text-base leading-relaxed mb-4">
+                  {cases[currentIndex].desc}
+                </p>
+                <p className="text-white font-semibold text-sm md:text-base">
+                  {cases[currentIndex].outcome}
+                </p>
               </div>
             </motion.div>
+          </AnimatePresence>
+
+          {/* Navigation Arrows */}
+          <button 
+            onClick={prevSlide}
+            className="absolute left-0 top-1/4 md:top-1/2 -translate-y-1/2 bg-black/80 hover:bg-black text-white p-2 md:p-3 z-20 transition-colors"
+            aria-label="Previous Case"
+          >
+            <ChevronLeft size={24} />
+          </button>
+
+          <button 
+            onClick={nextSlide}
+            className="absolute right-0 md:left-[55%] md:right-auto top-1/4 md:top-1/2 -translate-y-1/2 bg-black/80 hover:bg-black text-white p-2 md:p-3 z-20 transition-colors md:-ml-[48px]"
+            aria-label="Next Case"
+          >
+            <ChevronRight size={24} />
+          </button>
+        </div>
+
+        {/* Pagination Dots */}
+        <div className="flex justify-center items-center gap-2 mt-6">
+          {cases.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentIndex(idx)}
+              className={`w-3 h-3 rounded-full border-2 border-gray-500 transition-all ${
+                idx === currentIndex ? "bg-gray-600 border-gray-600 w-3.5 h-3.5" : "bg-transparent hover:bg-gray-400"
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
           ))}
         </div>
+
       </div>
     </section>
   );

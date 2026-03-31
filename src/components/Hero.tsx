@@ -7,27 +7,27 @@ const heroSlides = [
   {
     image: "/Heroimage/fire_adjuster.webp",
     title: "On-Site Fire Damage Investigation",
-    description: "Our certified loss adjusters respond immediately to industrial fire incidents, gathering critical evidence to support your maximum claim recovery.",
+    description: "We act on your behalf — our loss assessors respond immediately to industrial fire incidents, gathering critical evidence to secure your full claim entitlement.",
   },
   {
     image: "/Heroimage/adjuser.webp",
     title: "Structural Loss Assessment",
-    description: "When fire devastates your facility, our expert engineers conduct thorough structural assessments to document every aspect of your loss.",
+    description: "When fire devastates your facility, our engineers conduct thorough structural assessments, documenting every aspect of your loss to protect your recovery.",
   },
   {
     image: "/Heroimage/flux-2-pro-20251231_a_remove_blue_overlay_.webp",
     title: "Expert Technical Consulting",
-    description: "Qualified engineers and claim specialists who review technical documentation, blueprints and policies to build your strongest possible claim.",
+    description: "We represent the insured. Our engineers and claim specialists review technical documentation, blueprints, and policies to build your strongest possible claim.",
   },
   {
     image: "/Heroimage/scientists-and-government-officials-inspect-and-collect-chemical-leak-samples-in-industrial-sites-to-be-thoroughly-investigated-in-the-laboratory-photo.webp",
     title: "Industrial Site Inspection",
-    description: "Independent on-site investigations with detailed documentation. Our specialists collect evidence and analyze root causes to substantiate your claim.",
+    description: "On-site investigations conducted solely in the interest of the policyholder. We collect evidence and establish root cause to substantiate your claim in full.",
   },
   {
     image: "/Heroimage/wmremove-transformed.webp",
     title: "Machinery & Equipment Loss Recovery",
-    description: "Specialized assessment of fire and equipment damage with precise valuation to ensure full recovery of your machinery and asset losses.",
+    description: "Precise technical valuation of machinery and equipment losses — assessed independently on behalf of the insured to ensure complete and justified recovery.",
   },
 ];
 
@@ -70,42 +70,64 @@ const Hero = () => {
       ))}
 
       {/* Content */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div className="max-w-4xl mx-auto px-6 sm:px-8 text-center text-white z-10">
-          <motion.h1
-            key={`title-${currentSlide}`}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-black mb-6 leading-tight text-white drop-shadow-lg font-heading"
-            style={{
-              textShadow: "0 4px 12px rgba(0, 0, 0, 0.6)",
-              fontWeight: 700,
-              letterSpacing: "-0.02em"
-            }}
-          >
-            {heroSlides[currentSlide].title}
-          </motion.h1>
 
+          {/* Label */}
           <motion.p
-            key={`desc-${currentSlide}`}
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-blue-200 text-xs sm:text-sm font-bold tracking-[0.22em] uppercase mb-5"
+          >
+            Pakistan's Industrial Loss Assessing Firm
+          </motion.p>
+
+          {/* Main Headline */}
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-lg sm:text-xl lg:text-2xl text-white mb-8 max-w-2xl mx-auto leading-relaxed drop-shadow-lg font-semibold"
-            style={{
-              textShadow: "0 3px 10px rgba(0, 0, 0, 0.5)",
-              fontFamily: "'Arial', 'Helvetica Neue', sans-serif",
-              letterSpacing: "-0.01em"
-            }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight text-white font-heading"
+            style={{ textShadow: "0 4px 16px rgba(0,0,0,0.55)", letterSpacing: "-0.02em" }}
           >
-            {heroSlides[currentSlide].description}
-          </motion.p>
+            Struggling with an<br className="hidden sm:block" /> Insurance Claim?
+          </motion.h1>
 
-          <motion.div
+          {/* Sub headline */}
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-lg sm:text-xl text-white/90 mb-10 max-w-2xl mx-auto leading-relaxed"
+            style={{ textShadow: "0 2px 8px rgba(0,0,0,0.4)" }}
+          >
+            We represent the insured — assessing industrial losses, building your case, and negotiating your maximum recovery.
+          </motion.p>
+
+          {/* Value Props */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex flex-wrap justify-center gap-3 mb-10"
+          >
+            {["Faster Claim Recovery", "Qualified Engineers", "Higher Settlement Rate"].map((v) => (
+              <span
+                key={v}
+                className="flex items-center gap-2 bg-white/15 border border-white/25 backdrop-blur-sm text-white text-xs sm:text-sm font-semibold px-4 py-2"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-300 shrink-0" />
+                {v}
+              </span>
+            ))}
+          </motion.div>
+
+          {/* CTAs */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
             className="flex flex-wrap gap-4 justify-center"
           >
             <Link to="/contact" className="btn-kpmg text-center">
@@ -158,3 +180,8 @@ const Hero = () => {
 };
 
 export default Hero;
+
+
+
+
+

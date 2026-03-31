@@ -14,8 +14,8 @@ const About = () => {
           <h2 className="text-3xl lg:text-4xl font-extrabold text-kpmgmid mb-4 font-heading">
             WHO WE ARE
           </h2>
-          <p className="text-base text-slategray leading-relaxed font-sans">
-            Claim Consultants is a specialized technical consulting firm providing high-profile professional services to the insurance industry. With deep expertise in engineering, loss assessment, and insurance claims management, we help businesses navigate complex claims processes and maximize their recovery outcomes.
+          <p className="text-base text-justify text-slategray leading-relaxed font-sans">
+            Claim Consultants is a specialized technical consulting firm that exclusively represents policyholders and industrial clients in insurance claims. We work for the insured — not the insurer. With qualified engineers and claims professionals, we assess losses, establish root cause, and negotiate directly on your behalf to recover what you are rightfully owed.
           </p>
         </motion.div>
       </div>

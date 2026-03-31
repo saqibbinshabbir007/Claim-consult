@@ -8,9 +8,17 @@ const ContactPage = () => (
       <meta name="description" content="Contact Claim Consultants for a free insurance claim consultation. Technical claim support for industrial losses across Pakistan." />
     </Helmet>
     <div className="pt-20 lg:pt-24">
-      <div className="bg-kpmgnavy py-16 text-center">
-        <h1 className="text-3xl lg:text-5xl font-extrabold text-white">Contact Us</h1>
-        <p className="text-white/60 mt-3 max-w-xl mx-auto">Get expert help with your insurance claim — free initial consultation</p>
+      <div className="relative py-20 lg:py-28 text-center overflow-hidden flex flex-col items-center justify-center">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url('/Heroimage/pages/contact.png')` }}
+        />
+        <div className="absolute inset-0 bg-[#00338D]/45" />
+        <div className="relative z-10 px-4">
+          <h1 className="text-4xl lg:text-6xl font-extrabold text-white uppercase tracking-tight mb-4">Contact Us</h1>
+          <div className="w-24 h-1 bg-[#2563eb] mx-auto mb-6"></div>
+          <p className="text-blue-100 text-lg lg:text-xl font-medium max-w-xl mx-auto">Get expert help with your insurance claim — free initial consultation</p>
+        </div>
       </div>
       <Contact />
     </div>

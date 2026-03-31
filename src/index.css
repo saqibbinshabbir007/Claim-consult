@@ -43,6 +43,12 @@
   * {
     @apply border-border;
   }
+  html {
+    font-size: 18px;
+  }
+  html, body {
+    @apply overflow-x-hidden w-full;
+  }
   body {
     @apply bg-offwhite text-slategray font-sans antialiased;
   }
@@ -59,9 +65,9 @@
     @apply bg-white border-t-[3px] border-kpmgmid shadow-sm rounded-lg;
   }
   .btn-kpmg {
-    @apply bg-kpmgmid text-white font-semibold px-6 py-3 rounded-lg hover:bg-kpmgdark transition-colors duration-200 !text-white;
+    @apply bg-[#2563eb] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#2563eb]/90 transition-colors duration-200 !text-white;
   }
   .btn-kpmg-outline {
-    @apply border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-kpmgmid transition-colors duration-200;
+    @apply border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-[#2563eb] transition-colors duration-200;
   }
 }
